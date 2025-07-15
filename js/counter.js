@@ -88,25 +88,71 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 		
-		btnPlus.addEventListener('click', () => {
+		// btnPlus.addEventListener('click', () => {
+		// 	initializeInput();
+		// 	if (btnPlus.classList.contains('button-disabled')) return;
+		// 	currentValue = parseFloat((currentValue + dataStep).toFixed(10));
+		// 	if (currentValue > dataMax) currentValue = dataMax;
+		// 	input.value = formatValue(currentValue);
+		// 	updateButtons(currentValue);
+		// });
+
+		
+		// btnMinus.addEventListener('click', () => {
+		// 	initializeInput();
+		// 	if (btnMinus.classList.contains('button-disabled')) return;
+		// 	currentValue = parseFloat((currentValue - dataStep).toFixed(10));
+		// 	if (currentValue < dataMin) currentValue = dataMin;
+		// 	input.value = formatValue(currentValue);
+		// 	updateButtons(currentValue);
+		// });
+
+
+
+		let intervalId;
+
+		function plusAction() {
 			initializeInput();
 			if (btnPlus.classList.contains('button-disabled')) return;
 			currentValue = parseFloat((currentValue + dataStep).toFixed(10));
 			if (currentValue > dataMax) currentValue = dataMax;
 			input.value = formatValue(currentValue);
 			updateButtons(currentValue);
-		});
+		}
 
-		
-		btnMinus.addEventListener('click', () => {
+		function minusAction() {
 			initializeInput();
 			if (btnMinus.classList.contains('button-disabled')) return;
 			currentValue = parseFloat((currentValue - dataStep).toFixed(10));
 			if (currentValue < dataMin) currentValue = dataMin;
 			input.value = formatValue(currentValue);
 			updateButtons(currentValue);
+		}
+		btnPlus.addEventListener('click', plusAction);
+		btnMinus.addEventListener('click', minusAction);
+		btnPlus.addEventListener('mousedown', function() {
+			intervalId = setInterval(plusAction, 200);
+		});
+		btnMinus.addEventListener('mousedown', function() {
+			intervalId = setInterval(minusAction, 200);
+		});
+		document.addEventListener('mouseup', function() {
+			clearInterval(intervalId);
+		});
+		btnPlus.addEventListener('touchstart', function(e) {
+			e.preventDefault();
+			intervalId = setInterval(plusAction, 200);
+		});
+		btnMinus.addEventListener('touchstart', function(e) {
+			e.preventDefault();
+			intervalId = setInterval(minusAction, 200);
+		});
+		document.addEventListener('touchend', function() {
+			clearInterval(intervalId);
 		});
 
+		
+		
 		
 		input.addEventListener('focus', () => {
 			initializeInput();

@@ -983,19 +983,21 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 	top: auto;
 	bottom: auto;
 }
-.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
-	height: 5px;
-	border-radius: 3px;
-	background: var(--clr-border);
-	margin: 30px auto 0 auto;
-	position: relative;
-	top: auto;
-	bottom: auto;
-	left: auto;
-	right: auto;
-	width: calc(100% - 20px);
-	.swiper-scrollbar-drag {
-		background: #B9B9B9;
+body {
+	.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+		height: 5px;
+		border-radius: 3px;
+		background: var(--clr-border);
+		margin: 30px auto 0 auto;
+		position: relative;
+		top: auto;
+		bottom: auto;
+		left: auto;
+		right: auto;
+		width: calc(100% - 20px);
+		.swiper-scrollbar-drag {
+			background: #B9B9B9;
+		}
 	}
 }
 .slider-pagination, .tile-slider-pagination {
@@ -1008,6 +1010,33 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 	gap: 4px;
 	flex-wrap: nowrap;
 	overflow: visible;
+	&.type-dots {
+		justify-content: center;
+		flex-wrap: wrap;
+		.swiper-pagination-bullet {
+			width: 10px;height: 10px;
+			border-radius: 50%;
+			flex: 0 0 10px;
+			background: var(--clr-att);
+			border: none;
+			opacity: 0.2;
+			&:before {
+				display: none;
+			}
+			&.swiper-pagination-bullet-active, &:hover {
+				background: var(--clr-att);
+				opacity: 1;;
+			}
+		}
+		&.type-light {
+			.swiper-pagination-bullet {
+				background-color: #fff;
+				&.swiper-pagination-bullet-active, &:hover {
+					background: #fff;
+				}
+			}
+		}
+	}
 	.swiper-pagination-bullet {
 		height: 2px;
 		border-radius: 2px;
@@ -1020,6 +1049,7 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 		text-indent: -999px;font-size: 0;;
 		position: relative;
 		overflow: visible;
+		z-index: 20;
 		&:before {
 			content: "";
 			display: block;

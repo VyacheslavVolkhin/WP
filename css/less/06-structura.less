@@ -111,13 +111,21 @@ html.with-fancybox body.hide-scrollbar {
 		color: var(--clr-base-light);
 	}
 	.btn-action {
-		height: 50px;
+		height: 60px;
+		padding: 5px 0;
 		font-size: inherit;
 		line-height: inherit;
 		text-align: center;
 		display: block;
 		transition: all ease 0.2s;
 		color: inherit;
+		position: relative;
+		&[data-count] {
+			&:after {
+				margin-bottom: 10px;
+				margin-left: 2px;
+			}
+		}
 		&.button-active {
 			color: var(--clr-att);
 			.button-ico {
@@ -750,6 +758,20 @@ html.with-fancybox body.hide-scrollbar {
 		&:has(.open) {
 			.btn-menu-back {
 				display: block;
+			}
+			.popup-footer-wrap {
+				opacity: 0;
+				pointer-events: none;
+			}
+		}
+		.menu {
+			&:has(>li.open) {
+				&>li {
+					&:not(.open) {
+						opacity: 0;
+						pointer-events: none;
+					}
+				}
 			}
 		}
 		.open {

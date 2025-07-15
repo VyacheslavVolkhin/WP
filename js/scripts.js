@@ -6,6 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+	const form = document.querySelector('#form');
+
+	form.addEventListener('submit', function(event) {
+		event.preventDefault();
+		this.closest('.form-box').classList.add('active');
+	})
+
+
 	//btn tgl and add
 	let tglButtons = document.querySelectorAll('.js-btn-tgl')
 	let addButtons = document.querySelectorAll('.js-btn-add')
@@ -341,35 +349,41 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	//slider catalog
-	const swiperTileSliderCatalog = new Swiper('.tile-slider-catalog .swiper', {
-		loop: false,
-		slidesPerView: 1,
-		spaceBetween: 0,
-		autoHeight: true,
-		speed: 400,
-		pagination: {
-			el: '.tile-slider-catalog-pagination',
-			clickable: true,
-		},
-		autoplay: {
-			delay: 2500,
-			disableOnInteraction: false,
-		},
-		navigation: false,
+	// const swiperTileSliderCatalog = new Swiper('.tile-slider-catalog .swiper', {
+	// 	loop: false,
+	// 	slidesPerView: 1,
+	// 	spaceBetween: 0,
+	// 	autoHeight: true,
+	// 	speed: 400,
+	// 	pagination: {
+	// 		el: '.tile-slider-catalog-pagination',
+	// 		clickable: true,
+	// 	},
+	// 	autoplay: {
+	// 		delay: 2500,
+	// 		disableOnInteraction: false,
+	// 	},
+	// 	navigation: false,
 	
-	});
+	// });
 
 
 
 	//slider tile
 	const swiperSliderTile = new Swiper('.slider-tile .swiper', {
-		loop: false,
+		loop: true,
 		slidesPerView: 1,
 		spaceBetween: 0,
 		autoHeight: true,
-		speed: 400,
-		pagination: false,
-		autoplay: false,
+		speed: 600,
+		pagination: {
+			el: '.slider-tile-pagination',
+			clickable: true,
+		},
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 		navigation: {
 			nextEl: '.btn-action-ico.ico-arrow.ico-arrow-next.button-slider-tile-next',
 			prevEl: '.btn-action-ico.ico-arrow.ico-arrow-prev.button-slider-tile-prev',
@@ -386,6 +400,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		autoHeight: false,
 		speed: 400,
 		pagination: false,
+		freeMode: true,
 		 scrollbar: {
 			el: '.slider-scrollbar-tiles',
 			draggable: true,
@@ -398,12 +413,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		breakpoints: {
 			1024: {
 				slidesPerView: 3,
+				freeMode: false,
 			},
 			1200: {
 				slidesPerView: 4,
+				freeMode: false,
 			},
 			1400: {
 				slidesPerView: 5,
+				freeMode: false,
 			},
 		},
 	

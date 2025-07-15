@@ -28,6 +28,15 @@
 .form-box {
 	color: #fff;
 	font-weight: 600;
+	&.active {
+		.frm-succefull-message {
+			display: flex;
+		}
+		.info-inner-wrap, .form-inner-wrap {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
 	.box-inner-wrap {
 		background: #393131;
 		border-radius: var(--tilesRadius);
@@ -39,14 +48,37 @@
 		margin-bottom: 30px;
 		position: relative;
 		z-index: 2;
+		transition: all ease 0.2s;
 	}
 	.form-inner-wrap {
 		position: relative;
 		z-index: 2;
+		transition: all ease 0.2s;
+	}
+	.frm-succefull-message {
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		padding: 70px 20px 0 20px;
+		.elm-ico {
+			filter: var(--filterWhite)
+		}
+		&.active {
+			&~.form-inner-wrap, &~.info-inner-wrap {
+				opacity: 0;
+				pointer-events: none;
+			}
+		}
+
 	}
 	.photo-inner-wrap {
 		margin: 30px -25px -30px -25px;
 		position: relative;
+		transition: all ease 0.2s;
 		&:before {
 			content: "";
 			display: block;
@@ -165,6 +197,13 @@
 	}
 	.slider-inner-wrap {
 		position: relative;
+	}
+	.slider-pagination {
+		position: absolute;
+		bottom: 0 !important;
+		top: auto !important;
+		left: 0;right: 0;
+		padding: 0 0 20px 0;
 	}
 	.slider-wrap {
 		position: relative;
@@ -328,6 +367,13 @@
 }
 @media (min-width: 768px) {
 	.form-box {
+		.frm-succefull-message {
+			width: 60rem;
+			right: auto;
+			bottom: 0;
+			padding: 30px 20px;
+			justify-content: center;
+		}
 		.box-inner-wrap {
 			padding: 5.5rem 5rem 6rem 5rem;
 		}
@@ -488,6 +534,21 @@
 			.item-wrap {
 				width: 50%;
 			}
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+	.form-box {
+		&.active {
+			.photo-inner-wrap {
+				.elm-photo {
+					opacity: 0;
+				}
+			}
+		}
+		.frm-succefull-message {
+			right: 0;
+			width: 100%;
 		}
 	}
 }
