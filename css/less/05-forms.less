@@ -118,10 +118,17 @@
 	line-height: 1;;
 	position: relative;
 	display: block;
+	&:hover {
+		.form-input {
+			border-color: var(--clr-att-second);
+			background-color: #fff;
+		}
+	}
 	.form-input {
 		height: 40px;
 		padding-left: 14px;
 		padding-right: 50px;
+		transition: all ease 0.2s;
 	}
 	.btn-form {
 		height: 40px;
