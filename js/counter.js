@@ -33,9 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		const updateButtons = (val) => {
 			if (val <= dataMin) {
 				btnMinus.classList.add('button-disabled');
-				console.log('sss')
 				if (btnMinus.closest('.tile-action-wrap').querySelector('.btn.active')) {
 					btnMinus.closest('.tile-action-wrap').querySelector('.btn.active').classList.remove('active');
+
+
+					//counter set min
+					btnPlus.click();
+					btnMinus.classList.remove('button-disabled');
+					
+					
 				}
 			} else {
 				btnMinus.classList.remove('button-disabled');

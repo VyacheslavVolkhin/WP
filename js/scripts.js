@@ -19,7 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	let addButtons = document.querySelectorAll('.js-btn-add')
 	for (i = 0;i < tglButtons.length;i++) {
 		tglButtons[i].addEventListener('click', function(e) {
+			let next = this.nextElementSibling;
 			this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')
+			
+			
 			e.preventDefault()
 			return false
 		})
