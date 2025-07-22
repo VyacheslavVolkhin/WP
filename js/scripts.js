@@ -5,13 +5,53 @@ document.addEventListener("DOMContentLoaded", function() {
 		//settings
 	});
 
+	//side menu
+	const sideMenuButtons = document.querySelectorAll('.side-menu-box .btn-menu');
 
+	if (sideMenuButtons) {
+		sideMenuButtons.forEach(function(sideButton) {
+			sideButton.addEventListener('click', function(e) {
+				if (this.nextElementSibling.classList.contains('menu')) {
+					e.preventDefault();
+					this.closest('li').classList.toggle('open');
+				}
+			})
+		})
+	}
+
+	//popup mobile box
+	document.querySelectorAll('.js-popup-mobile-close').forEach(btnClose => {
+		btnClose.addEventListener('click', function(e) {
+			e.preventDefault();
+			this.closest('.popup-mobile-box').classList.remove('active')
+		});
+	})
+	document.querySelectorAll('.js-popup-mobile-open').forEach(btn => {
+	btn.addEventListener('click', function(e) {
+		e.preventDefault();
+
+		// Получаем значение data-mobile-popup у кнопки
+		const popupName = this.getAttribute('data-mobile-popup');
+		if(!popupName) return;
+
+		// Находим элемент с таким же data-mobile-popup
+		const popup = document.querySelector(`.popup-mobile-box[data-mobile-popup="${popupName}"]`);
+		if(popup) {
+		popup.classList.add('active');
+		}
+	});
+	});
+
+	
+	//form submit
 	const form = document.querySelector('#form');
 
-	form.addEventListener('submit', function(event) {
+	if (form) {
+		form.addEventListener('submit', function(event) {
 		event.preventDefault();
 		this.closest('.form-box').classList.add('active');
 	})
+	}
 
 
 	//btn tgl and add
@@ -460,6 +500,22 @@ document.addEventListener("DOMContentLoaded", function() {
 			},
 		},
 	
+	});
+
+
+	//slider categories
+	const swiperSliderCategories = new Swiper('.slider-categories .swiper', {
+		loop: false,
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		autoHeight: false,
+		speed: 400,
+		pagination: {
+			el: '.slider-categories-pagination',
+			clickable: true,
+		},
+		autoplay:false,
+		navigation: false,
 	});
 
 

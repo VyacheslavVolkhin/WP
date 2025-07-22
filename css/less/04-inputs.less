@@ -127,6 +127,9 @@ select.form-input:required:invalid {
 			color: var(--clr-att);
 		}
 	}
+	&.button-round {
+		border-radius: 100px;
+	}
 	&.button-tab {
 		height: 40px;
 		border-radius: 20px;
@@ -158,6 +161,30 @@ select.form-input:required:invalid {
 				background-color: #fff;
 				border-color: #fff;
 				color: var(--clr-base);
+			}
+		}
+	}
+	&.button-tag {
+		background: none;
+		border-color: var(--clr-border);
+		color: var(--clr-base-light);
+		&:hover {
+			background: var(--clr-att);
+			border-color: var(--clr-att);
+			color: #fff;
+			.button-title {
+				&:before {
+					color: #fff;
+				}
+			}
+		}
+		.button-title {
+			&:before {
+				content: "#";
+				font-size: (18/15em);
+				color: var(--clr-att);
+				transition: all ease 0.2s;
+				margin: 0 5px 0 0;
 			}
 		}
 	}
@@ -241,6 +268,13 @@ select.form-input:required:invalid {
 .button-link, .button-light, .button-gray {
 	.button-ico {
 		filter: none;
+	}
+}
+.button-gray {
+	&:hover {
+		.button-ico {
+			filter: var(--filterWhite);
+		}
 	}
 }
 .button-ico {
