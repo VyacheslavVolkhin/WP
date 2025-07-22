@@ -93,27 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			updateButtons(dataMin); 
 		}
 
-		
-		// btnPlus.addEventListener('click', () => {
-		// 	initializeInput();
-		// 	if (btnPlus.classList.contains('button-disabled')) return;
-		// 	currentValue = parseFloat((currentValue + dataStep).toFixed(10));
-		// 	if (currentValue > dataMax) currentValue = dataMax;
-		// 	input.value = formatValue(currentValue);
-		// 	updateButtons(currentValue);
-		// });
-
-		
-		// btnMinus.addEventListener('click', () => {
-		// 	initializeInput();
-		// 	if (btnMinus.classList.contains('button-disabled')) return;
-		// 	currentValue = parseFloat((currentValue - dataStep).toFixed(10));
-		// 	if (currentValue < dataMin) currentValue = dataMin;
-		// 	input.value = formatValue(currentValue);
-		// 	updateButtons(currentValue);
-		// });
-
-
 
 		let intervalId;
 
@@ -147,10 +126,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 		btnPlus.addEventListener('touchstart', function(e) {
 			e.preventDefault();
+			plusAction()
 			intervalId = setInterval(plusAction, 200);
 		});
 		btnMinus.addEventListener('touchstart', function(e) {
 			e.preventDefault();
+			minusAction()
 			intervalId = setInterval(minusAction, 200);
 		});
 		document.addEventListener('touchend', function() {

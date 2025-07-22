@@ -1368,7 +1368,7 @@ html.with-fancybox body.hide-scrollbar {
 				margin-top: 10px;
 				padding: 10px 15px 10px 15px;
 				min-height: 562px;
-				&:has(li:hover) {
+				&:has(li:has(.menu):hover) {
 					&:before {
 						width: 705px;
 					}
@@ -1479,6 +1479,14 @@ html.with-fancybox body.hide-scrollbar {
 			.li-main {
 				&.open {
 					&>.btn-menu {
+						background: var(--clr-att);
+						color: #fff;
+						border-color: var(--clr-att);
+						&:hover {
+							background: var(--clr-att);
+							color: #fff;
+							border-color: var(--clr-att);
+						}
 						.button-ico {
 							img, svg {
 								opacity: 0;
@@ -1493,6 +1501,7 @@ html.with-fancybox body.hide-scrollbar {
 								background-size: 100% auto;
 								top: 50%;left: 50%;
 								margin: -12px 0 0 -12px;
+								filter: var(--filterWhite);
 							}
 						}
 					}
