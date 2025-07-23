@@ -1279,6 +1279,20 @@
 	}
 }
 @media (min-width: 1024px) {
+	.side-menu-box {
+		&.fixed-top {
+			position: fixed;
+			top: 30px;
+			z-index: 100;
+			width: inherit;
+		}
+		&.fixed-bottom {
+			position: fixed;
+			bottom: 30px;
+			z-index: 100;
+			width: inherit;
+		}
+	}
 	.filter-action-box {
 		display: none;
 	}
@@ -1495,7 +1509,6 @@
 		width: 26rem;
 		flex-shrink: 0;
 		.side-menu-box {
-			position: sticky;
 		}
 	}
 	.wrap {

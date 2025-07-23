@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		})
 	}
 
+
+
+		
 	//popup mobile box
 	document.querySelectorAll('.js-popup-mobile-close').forEach(btnClose => {
 		btnClose.addEventListener('click', function(e) {
@@ -29,12 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	document.querySelectorAll('.js-popup-mobile-open').forEach(btn => {
 	btn.addEventListener('click', function(e) {
 		e.preventDefault();
-
-		// Получаем значение data-mobile-popup у кнопки
 		const popupName = this.getAttribute('data-mobile-popup');
 		if(!popupName) return;
-
-		// Находим элемент с таким же data-mobile-popup
 		const popup = document.querySelector(`.popup-mobile-box[data-mobile-popup="${popupName}"]`);
 		if(popup) {
 		popup.classList.add('active');

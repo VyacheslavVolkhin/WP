@@ -4385,6 +4385,18 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 @media (min-width: 1024px) {
+  .side-menu-box.fixed-top {
+    position: fixed;
+    top: 30px;
+    z-index: 100;
+    width: inherit;
+  }
+  .side-menu-box.fixed-bottom {
+    position: fixed;
+    bottom: 30px;
+    z-index: 100;
+    width: inherit;
+  }
   .filter-action-box {
     display: none;
   }
@@ -4606,9 +4618,6 @@ html.with-fancybox body.hide-scrollbar {
     width: 26rem;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-  }
-  .side-wrap .side-menu-box {
-    position: sticky;
   }
   .wrap:has(.side-wrap .side-menu-box ) {
     overflow: visible;
