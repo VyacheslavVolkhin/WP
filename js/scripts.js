@@ -225,9 +225,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	function popupElementsClose() {
 		togglePopupButtons.forEach(element => {
-			if (!element.closest('.no-close')) {
-				element.classList.remove('active')
+			if (window.innerWidth < 1024) {
+				if (!element.closest('.no-close-mobile') && !element.closest('.no-close')) {
+					element.classList.remove('active')
+				}
+
+			} else {
+				if (!element.closest('.no-close')) {
+					element.classList.remove('active')
+				}
 			}
+			
 		})
 	}
 	function popupElementsContentPositionClass() {

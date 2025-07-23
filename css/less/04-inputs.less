@@ -188,6 +188,40 @@ select.form-input:required:invalid {
 			}
 		}
 	}
+	&.button-selected {
+		background: #F5F7FA;
+		border-radius: 5px;
+		height: 36px;
+		padding: 0 34px 0 15px;
+		border: none;
+		font-size: 15px;
+		font-weight: 600;
+		color: var(--clr-base-light);
+		&:hover {
+			background: #F5F7FA;
+			color: var(--clr-base-light);
+		}
+		.button-value {
+			display: inline;
+			color: var(--clr-base);
+		}
+		.button-del {
+			width: 24px;height: 24px;
+			position: absolute;
+			top: 50%;right: 20px;
+			margin: -12px -12px 0 0;
+			z-index: 2;
+			filter: var(--filterAttToLight);
+			&:hover {
+				filter: none;
+			}
+		}
+		.btn-action-ico.ico-clear {
+			&:before {
+				background-size: 16px auto;
+			}
+		}
+	}
     &.button-border {
 		background-color: transparent;
 		color: var(--clr-att);

@@ -1,6 +1,72 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.filter-action-box {
+	margin-bottom: var(--sectionMargin);
+	display: flex;
+	.action-wrap {
+		flex: 1;
+	}
+	.filter-wrap {
+		flex-shrink: 0;
+		padding-left: 10px;
+		.btn {
+			width: 66px;
+			padding: 0;
+			.button-ico {
+				margin: 0 auto;
+			}
+		}
+	}
+	.btn {
+		min-width: 0;
+		font-size: 15px;
+		font-weight: 600;
+		padding: 0 20px 0 20px;
+		height: 40px;
+		.button-ico {
+			margin-left: 2px;
+		}
+		&.button-border.button-gray {
+			&:hover {
+				background-color: var(--clr-att);
+				border-color: var(--clr-att);
+			}
+			&:not(:hover) {
+				color: var(--clr-base-light);
+				border-color: var(--clr-border);
+				.button-ico {
+					filter: grayscale(100%);
+				}
+			}
+		}
+	}
+}
+.filter-box {
+	.filter-selected-wrap {
+		display: none;
+	}
+	.filter-reset-wrap {
+		.btn {
+			font-size: 18px;
+			line-height: 1.6;
+			color: var(--clr-base);
+			font-weight: 600;
+			.button-title {
+				border-bottom: 1px dotted;
+			}
+			.button-ico {
+				filter: var(--filterAttToBase);
+				width: 18px;height: 18px;
+			}
+			&:hover {
+				.button-ico {
+					filter: none;
+				}
+			}
+		}
+	}
+}
 .action-inner-box {
 	position: relative;
 	margin-bottom: var(--sectionMarginSmall);
@@ -771,6 +837,7 @@
 	}
 }
 @media (max-width: 1023px) {
+	
 	.pagenav-box {
 		.btn-page {
 			&:nth-child(5) {
@@ -859,6 +926,101 @@
 			top: 30px;right: 30px;
 			z-index: 2;
 			margin: -20px -20px 0 0;
+		}
+	}
+	.filter-box {
+		margin: 0;
+		.popup-content-wrap {
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+		}
+		.filter-content-wrap {
+			width: 100%;
+			max-height: calc(100% - 45px);
+			overflow-y: auto;
+			overflow-x: hidden;
+			scrollbar-width: none;
+			-ms-overflow-style: none;
+			&::-webkit-scrollbar {
+				width: 0;
+				height: 0;
+			}
+		}
+		.filter-reset-wrap {
+			text-align: center;
+			padding-top: 15px;
+			height: 45px;
+		}
+		.frm-field-select {
+			display: block;
+			.select-content-block {
+				padding: 15px 0;
+				border-top: 1px solid var(--clr-border);
+				border-bottom: 1px solid var(--clr-border);
+				width: 100%;
+				border-radius: 0;
+				box-shadow: none;
+				background: none;
+				min-width: 0;
+				position: relative;
+				top: auto;
+				bottom: auto;
+				left: auto;
+				right: auto;
+				margin: 0;
+				.btn-popup-close {
+					display: none;
+				}
+			}
+			.select-scroll-wrap {
+				max-height: 544px;
+			}
+			.select-content-wrap {
+				padding-left: 10px;
+				columns: 1;
+				column-gap: 0;
+			}
+			.frm-select {
+				margin-bottom: 15px;
+			}
+			.btn-filter-toggle, .btn-filter-toggle.btn {
+				display: flex;
+				height: auto;
+				min-height: 50px;
+				align-items: center;
+				width: 100%;
+				min-width: 0;
+				border-radius: 0;
+				border: none;
+				white-space: normal;
+				text-align: left;
+				justify-content: flex-start;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-right: 40px;
+				font-size: 15px;
+				font-weight: 600;
+				color: var(--clr-base);
+				&:before {
+					filter: var(--filterAttToBase);
+				}
+				&:hover {
+					color: var(--clr-base);
+					background: none;
+					&:before {
+						filter: var(--filterAttToBase);
+					}
+				}
+				&.active {
+					color: var(--clr-att);
+					background: none;
+					&:before {
+						filter: none;
+					}
+				}
+			}
 		}
 	}
 }
@@ -1117,7 +1279,39 @@
 	}
 }
 @media (min-width: 1024px) {
-	
+	.filter-action-box {
+		display: none;
+	}
+	.filter-box {
+		margin-bottom: 45px;
+		.filter-content-wrap {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 0 5px 0;
+		}
+		.filter-section-wrap {
+			width: auto;
+			flex-shrink: 0;
+			max-width: 100%;
+			padding: 0 15px 15px 0;
+		}
+		.filter-actions-wrap {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -15px 0 0;
+		}
+		.filter-selected-wrap {
+			display: flex;
+			flex-wrap: wrap;
+			.btn {
+				margin: 0 15px 15px 0;
+			}
+		}
+		.filter-reset-wrap {
+			flex-shrink: 0;
+			padding: 0 15px 15px 0;
+		}
+	}
 	.action-inner-box {
 		.info-inner-wrap {
 			font-size: 18px;
@@ -1302,7 +1496,6 @@
 		flex-shrink: 0;
 		.side-menu-box {
 			position: sticky;
-			top: 110px;
 		}
 	}
 	.wrap {
