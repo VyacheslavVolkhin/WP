@@ -31,27 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		
 		const updateButtons = (val) => {
-			if (val <= dataMin) {
-				btnMinus.classList.add('button-disabled');
-				if (btnMinus.closest('.tile-action-wrap').querySelector('.btn.active')) {
-					btnMinus.closest('.tile-action-wrap').querySelector('.btn.active').classList.remove('active');
-
-
-					//counter set min
-					plusAction()
-					clearInterval(intervalId);
-					btnMinus.classList.remove('button-disabled');
-					
-					
-				}
-			} else {
-				btnMinus.classList.remove('button-disabled');
-			}
+			
 
 			if (val >= dataMax) {
 				btnPlus.classList.add('button-disabled');
 			} else {
 				btnPlus.classList.remove('button-disabled');
+			}
+
+			if (val <= dataMin) {
+				clearInterval(intervalId);
+				plusAction()
+				if (btnMinus.closest('.tile-action-wrap').querySelector('.btn.active')) {
+					btnMinus.closest('.tile-action-wrap').querySelector('.btn.active').classList.remove('active');
+				}
 			}
 		};
 
@@ -113,6 +106,25 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (currentValue < dataMin) currentValue = dataMin;
 			input.value = formatValue(currentValue);
 			updateButtons(currentValue);
+
+			/*
+
+			if (val <= dataMin) {
+				if (btnMinus.closest('.tile-action-wrap').querySelector('.btn.active')) {
+					btnMinus.closest('.tile-action-wrap').querySelector('.btn.active').classList.remove('active');
+
+
+					//counter set min
+					plusAction()
+					clearInterval(intervalId);
+					btnMinus.classList.remove('button-disabled');
+					
+					
+				}
+			}
+			
+			*/
+			
 		}
 		btnPlus.addEventListener('click', plusAction);
 		btnMinus.addEventListener('click', minusAction);
