@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 					//counter set min
-					btnPlus.click();
+					plusAction()
+					clearInterval(intervalId);
 					btnMinus.classList.remove('button-disabled');
 					
 					
