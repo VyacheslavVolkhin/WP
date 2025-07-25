@@ -1,6 +1,10 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.tooltip-content-box {
+	display: none;
+	width: 150px;
+}
 .panel-fixed {
 	padding-bottom: 119px;
 	.panel-card-box {
@@ -1206,6 +1210,20 @@
 .popup-mobile-box {
 	.popup-title-wrap {
 		display: none;
+	}
+}
+body {
+	.tippy-box {
+		background: #fff;
+		border-radius: 5px;
+		filter: drop-shadow(0 4px 18.3px rgba(0, 0, 0, 0.05));
+		width: 180px;
+		.tippy-content {
+			padding: 15px 10px 15px 15px;
+		}
+		.tippy-arrow {
+			color: #fff;;
+		}
 	}
 }
 @media (max-width: 1023px) {

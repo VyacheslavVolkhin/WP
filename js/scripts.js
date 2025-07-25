@@ -5,6 +5,25 @@ document.addEventListener("DOMContentLoaded", function() {
 		//settings
 	});
 
+
+
+	//tooltip
+	tippy('[data-tooltip]', {
+    content(reference) {
+      // Получаем селектор из data-tooltip
+      const selector = reference.getAttribute('data-tooltip');
+      // Ищем нужный элемент
+      const el = document.querySelector(selector);
+      // Если нашли — возвращаем его содержимое
+      return el ? el.innerHTML : '';
+    },
+    allowHTML: true,
+    interactive: true,
+    placement: 'top',
+    theme: 'light-border',
+    maxWidth: 350
+  });
+
 	//side menu
 	const sideMenuButtons = document.querySelectorAll('.side-menu-box .btn-menu');
 

@@ -2361,6 +2361,30 @@ html.with-fancybox body.hide-scrollbar {
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
+.item-tile-product-tooltip {
+  display: block;
+  position: relative;
+  text-align: left;
+  font-size: 11px;
+  line-height: normal;
+  color: var(--clr-base-light);
+}
+.item-tile-product-tooltip .tile-photo-wrap {
+  display: block;
+  margin: 8px 0;
+}
+.item-tile-product-tooltip .tile-title {
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--clr-base);
+  margin: 0;
+}
+.item-tile-product-tooltip .tile-photo {
+  width: 90px;
+  margin: 0 auto;
+  aspect-ratio: 1;
+}
 .item-tile-result {
   display: -ms-flexbox;
   display: flex;
@@ -3430,6 +3454,10 @@ html.with-fancybox body.hide-scrollbar {
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.tooltip-content-box {
+  display: none;
+  width: 150px;
+}
 .panel-fixed {
   padding-bottom: 119px;
 }
@@ -4714,6 +4742,18 @@ html.with-fancybox body.hide-scrollbar {
 }
 .popup-mobile-box .popup-title-wrap {
   display: none;
+}
+body .tippy-box {
+  background: #fff;
+  border-radius: 5px;
+  filter: drop-shadow(0 4px 18.3px rgba(0, 0, 0, 0.05));
+  width: 180px;
+}
+body .tippy-box .tippy-content {
+  padding: 15px 10px 15px 15px;
+}
+body .tippy-box .tippy-arrow {
+  color: #fff;
 }
 @media (max-width: 1023px) {
   .pagenav-box .btn-page:nth-child(5) ~ .btn-page {
