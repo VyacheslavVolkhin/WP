@@ -3,6 +3,14 @@
 \* ----------------------------------- */
 .frm-field-select {
 	position: relative;
+	&.type-text {
+		.select-content-block {
+			width: 100%;
+			left: 0;right: 0;
+			border-radius: 5px;
+			padding: 15px 0;
+		}
+	}
 	.select-content-block {
 		display: none;
 		z-index: 2;
@@ -129,6 +137,83 @@
 			&:before {
 				background-size: 20px auto;
 			}
+		}
+	}
+	.btn-popup {
+		width: 100%;
+		white-space: normal;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		text-align: left;
+		padding: 10px 30px 10px 15px;
+		border-radius: 8px;
+		height: auto;
+		font-weight: 400;
+		&.active {
+			&:before {
+				rotate: 180deg;
+			}
+		}
+		&:before {
+			content: "";
+			display: block;
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			background: url(../img/icons/arrow-toggle.svg) center no-repeat;
+			background-size: 40px auto;
+			top: 50%;right: 8px;
+			margin-top: -12px;
+			transition: all ease 0.2s;
+		}
+		.button-ico {
+			width: 30px;height: 30px;
+			margin: 0;
+			filter: none;
+		}
+		.button-name {
+			font-size: 18px;
+			line-height: 30px;
+			font-weight: 600;
+			flex-shrink: 0;
+			padding-left: 10px;
+			padding-right: 10px;
+			max-width: calc(100% - 30px);
+		}
+		.button-title {
+			display: block;
+			max-width: 100%;
+			flex-shrink: 0;
+			margin: 0 0 0 0;
+			padding: 1px 0;
+			font-size: 15px;
+			line-height: 1.6;
+			b {
+				display: none;
+			}
+		}
+		&.button-gray {
+			&:hover {
+				border-color: var(--clr-att);
+				color: var(--clr-base);
+				background-color: transparent;
+			}
+		}
+	}
+	.btn-menu {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		padding: 5px 20px;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: normal;
+		color: var(--clr-base);
+		&:hover {
+			color: var(--clr-att);
+		}
+		.button-ico, .button-name {
+			display: none;
 		}
 	}
 }
@@ -414,5 +499,16 @@
 @media (min-width: 1024px) {
 	.frm-select {
 		font-size: 13px;
+	}
+	.frm-field-select {
+		.btn-popup {
+			padding: 6px 20px;
+			.button-ico {
+				width: 36px;height: 36px;
+			}
+			.button-title {
+				font-size: 18px;
+			}
+		}
 	}
 }

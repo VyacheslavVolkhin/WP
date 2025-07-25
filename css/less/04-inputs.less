@@ -130,6 +130,38 @@ select.form-input:required:invalid {
 	&.button-round {
 		border-radius: 100px;
 	}
+	&.button-tab-line {
+		height: 50px;
+		font-size: 18px;
+		font-weight: 400;
+		background: none;
+		border: none;
+		border-radius: 0;
+		padding: 0 10px;
+		color: var(--clr-base);
+		width: 100%;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;left: 0;right: 0;
+			height: 1px;
+			background: var(--clr-border);
+		}
+		&:hover, &.active {
+			color: var(--clr-att);
+			background: none;
+			&:before {
+				background: var(--clr-att);
+			}
+		}
+		&.active {
+			font-weight: bold;
+			&:before {
+				height: 2px;
+			}
+		}
+	}
 	&.button-tab {
 		height: 40px;
 		border-radius: 20px;
@@ -186,6 +218,21 @@ select.form-input:required:invalid {
 				transition: all ease 0.2s;
 				margin: 0 5px 0 0;
 			}
+		}
+	}
+	&.button-filter {
+		height: 34px;
+		border-radius: 5px;
+		border-color: var(--clr-border);
+		background-color: transparent;
+		padding: 0 9px;
+		font-size: 13px;
+		font-weight: 600;
+		color: var(--clr-base-light);
+		&:hover, &.active {
+			border-color: var(--clr-att);
+			background-color: transparent;
+			color: var(--clr-att);
 		}
 	}
 	&.button-selected {
@@ -536,6 +583,10 @@ select.form-input:required:invalid {
 }
 @media (min-width: 1024px) {
 	.btn {
+		&.button-filter {
+			height: 36px;
+			font-size: 15px;
+		}
 		&.button-full-d {
 			width: 100%;
 			padding: 0 15px;

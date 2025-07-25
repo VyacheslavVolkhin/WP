@@ -60,6 +60,18 @@ p, ul, ol, table, blockquote, .bq-text {
 		margin-bottom: 0 !important;
 	}
 }
+.list-dots {
+	li {
+		padding-left: 18px;
+		&:before {
+			width: 8px;height: 8px;
+			border-radius: 50%;
+			background: var(--clr-att);
+			left: 0;
+			margin: -4px 0 0 0;
+		}
+	}
+}
 li {
 	position: relative;
 	padding-left: 34px;
@@ -177,8 +189,14 @@ h6, .h6-title {
 .h3-title, h3 {
 	font-size: 18px;
 }
+.h4-title, h4 {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1.61;
+	margin: 20px 0;
+}
 .text-light, .title-light {
-	color: var(--clr-light);
+	color: var(--clr-base-light);
 }
 .text-base, .title-base {
 	color: var(--clr-base);
@@ -224,6 +242,32 @@ blockquote, .bq-text {
 [href*="tel"] {
 	white-space: nowrap;
 }
+table {
+	width: 100%;
+	margin-bottom: 1.5em;
+	font-size: 15px;
+	line-height: 1.4;
+	th, td {
+		align-items: center;
+		padding: 8px;
+		border-top: 1px solid var(--clr-border);
+		text-align: left;
+		font-weight: 400;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+	thead {
+		th, td {
+			border-top: none;
+			font-weight: 600;
+			padding: 8px;
+		}
+	}
+}
 @media (max-width: 1399px) {
     :root {
         font-size: 9.5px;
@@ -264,6 +308,18 @@ blockquote, .bq-text {
 	}
 	blockquote, .bq-text {
 		padding: 30px 4rem 30px  7rem;
+	}
+	table {
+		th, td {
+			padding: 14px;
+		}
+		thead {
+			th, td {
+				font-size: 18px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
 	}
 }
 @media (min-width: 1400px) {
