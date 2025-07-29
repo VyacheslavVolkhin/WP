@@ -610,6 +610,25 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+	//mobile slider catalog item
+	if (window.innerWidth < 1024) {
+		const swiperSliderTilesCatalog = new Swiper('.tile-slider-catalog .swiper', {
+			loop: false,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: true,
+			speed: 400,
+			pagination: {
+				el: '.tile-slider-catalog-pagination',
+				clickable: true,
+			},
+			autoplay: false,
+			navigation: false,
+		
+		});
+	}
+
+
 
 
 })
