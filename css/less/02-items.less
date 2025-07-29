@@ -918,6 +918,33 @@
 		background-color: var(--clr-att);
 	}
 }
+.elm-panel-button {
+	border-radius: var(--mainRadius);
+	border: 1px solid var(--clr-att);
+	padding: 1rem 2rem;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	flex-shrink: 0;
+	flex-wrap: wrap;
+	.info-title {
+		padding: 1rem 0 1rem 0;
+		font-size: 15px;
+		font-weight: 600;
+		flex: 1;
+		text-align: left;
+		color: var(--clr-att);
+		margin: 0;
+		text-align: center;
+	}
+	.info-action {
+		flex-shrink: 0;
+		width: 100%;
+		.btn {
+			width: 100%;
+		}
+	}
+}
 @media (max-width: 1399px) {
 	.item-tile-info-ico {
 		white-space: normal;

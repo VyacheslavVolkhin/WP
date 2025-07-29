@@ -216,6 +216,12 @@
 .info-card-box {
 	margin-bottom: var(--sectionMargin);
 	position: relative;
+	.delivery-info-wrap {
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 	.title-inner-wrap {
 		margin-bottom: 20px;
 		.section-title {
@@ -2299,11 +2305,21 @@ body {
 }
 @media (min-width: 1400px) {
 	.info-card-box {
+		.elm-panel-button {
+			.info-action {
+				width: auto;
+			}
+			.info-title {
+				padding-right: 10px;
+				text-align: left;
+			}
+		}
 		.info-inner-wrap {
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
 		}
+		
 		.product-info-wrap {
 			width: 100%;
 			flex-shrink: 0;
