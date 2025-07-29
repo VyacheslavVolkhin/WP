@@ -278,21 +278,27 @@
 		}
 	}
 	.counter-info-wrap {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0 -15px 15px 0;
+		margin-bottom: 30px;
+		&:has(.btn.active) {
+			.counter-wrap {
+				display: block;
+			}
+			.button-wrap {
+				display: none;
+			}
+		}
 	}
 	.counter-wrap {
-		margin-bottom: 15px;
 		width: 100%;
 		flex-shrink: 0;
-		padding-right: 15px;
+		display: none;
+		animation: fadein ease 0.2s;
 	}
 	.button-wrap {
-		margin-bottom: 15px;
 		width: 100%;
 		flex-shrink: 0;
-		padding-right: 15px;
+		display: block;
+		animation: fadein ease 0.2s;
 		.btn {
 			width: 100%;
 			padding: 0 10px;
@@ -2293,14 +2299,32 @@ body {
 }
 @media (min-width: 1400px) {
 	.info-card-box {
+		.info-inner-wrap {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+		.product-info-wrap {
+			width: 100%;
+			flex-shrink: 0;
+			margin-right: 0;
+		}
+		.price-info-wrap {
+			width: 50%;
+			margin-right: 0;
+			flex-shrink: 0;
+		}
 		.counter-info-wrap {
 			margin-right: 0;
 			flex-wrap: nowrap;
+			display: block;
+			width: 50%;
+			flex-shrink: 0;
 		}
 		.counter-wrap {
 			width: auto;
 			flex: 1;
-			padding: 0 15px 0 0;
+			padding: 0 0 0 0;
 			margin-right: 0;
 		}
 		.button-wrap {
@@ -2310,6 +2334,10 @@ body {
 			.btn {
 				min-width: 24.4rem;
 			}
+		}
+		.features-info-wrap, .delivery-info-wrap {
+			width: 100%;
+			flex-shrink: 0;
 		}
 		table {
 			br {

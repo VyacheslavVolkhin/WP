@@ -712,6 +712,28 @@
 			}
 		}
 	}
+	&.photo-play {
+		&:before {
+			content: "";
+			display: block !important;
+			width: 45.7%;
+			padding: 0;
+			aspect-ratio: 1;
+			background: url(../img/icons/play.svg) center no-repeat;
+			background-size: 100% auto;
+			z-index: 2;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			max-width: 80px;
+		}
+		&:after {
+			display: none !important;
+		}
+	}
     &:before {
         content: "";
         display: none;

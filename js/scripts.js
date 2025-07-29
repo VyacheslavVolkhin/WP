@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		maxWidth: 350
 	});
 
-	
+
 
 	//side menu
 	const sideMenuButtons = document.querySelectorAll('.side-menu-box .btn-menu');
@@ -569,7 +569,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		const mainPag = container.querySelector('.slider-photos-main-pagination');
 	
 		const swiperPhotosPreview = new Swiper(thumbsEl, {
-			loop: false,
+			loop: true,
 			slidesPerView: 5,
 			spaceBetween: 0,
 			direction: 'vertical',

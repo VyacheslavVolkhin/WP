@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (val <= dataMin) {
 				clearInterval(intervalId);
 				plusAction()
-				if (btnMinus.closest('.tile-action-wrap').querySelector('.btn.active')) {
-					btnMinus.closest('.tile-action-wrap').querySelector('.btn.active').classList.remove('active');
+				if (btnMinus.closest('.js-counter-wrap').querySelector('.btn.active')) {
+					btnMinus.closest('.js-counter-wrap').querySelector('.btn.active').classList.remove('active');
 				}
 			}
 		};
