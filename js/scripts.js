@@ -62,12 +62,18 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 	//form submit
 	const form = document.querySelector('#form');
-
+	const formPay = document.querySelector('#form-pay');
+	if (formPay) {
+		formPay.addEventListener('submit', function(event) {
+			event.preventDefault();
+			this.closest('.form-main-box').classList.add('active');
+		})
+	}
 	if (form) {
 		form.addEventListener('submit', function(event) {
-		event.preventDefault();
-		this.closest('.form-box').classList.add('active');
-	})
+			event.preventDefault();
+			this.closest('.form-box').classList.add('active');
+		})
 	}
 
 
@@ -612,7 +618,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	//mobile slider catalog item
 	if (window.innerWidth < 1024) {
-		const swiperSliderTilesCatalog = new Swiper('.tile-slider-catalog .swiper', {
+		const swiperSliderTilesCatalog = new Swiper('.items-wrap .tile-slider-catalog .swiper', {
 			loop: false,
 			slidesPerView: 1,
 			spaceBetween: 0,
