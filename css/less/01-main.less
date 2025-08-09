@@ -88,6 +88,36 @@ li {
 		margin-top: -12px;
 	}
 }
+ol {
+	counter-reset: li; 
+	list-style: none;
+	li {
+		position: relative;
+		padding-left: (34/18em);
+		&:before {
+			display: none;
+		}
+		&:after {
+			content: '0' counter(li); 
+			counter-increment: li; 
+			border-radius: 0;
+			background-color: transparent;
+			display: block;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: (34/18em);
+			height: auto;
+			color: var(--clr-att);
+			font-weight: bold;
+		}
+		&:nth-child(9)~li:after {
+			content: counter(li);
+		}
+	}
+}
 .menu, .list {
     margin: 0;
     padding: 0;
@@ -194,6 +224,12 @@ h6, .h6-title {
 	font-weight: bold;
 	line-height: 1.61;
 	margin: 20px 0;
+}
+.h5-title, h5 {
+	font-size: 1em;
+	line-height: inherit;
+	font-weight: 600;
+	margin: 25px 0;
 }
 .text-light, .title-light {
 	color: var(--clr-base-light);
