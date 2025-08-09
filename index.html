@@ -1948,6 +1948,9 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="return.html">Return</a></li>
                 <li><a href="bonuses.html">Bonuses</a></li>
+                <li>---Popups---</li>
+                <li><a href="" class="js-popup-open" data-popup="popup-form">Popup form</a></li>
+                <li><a href="" class="js-popup-open" data-popup="popup-succefull">Popup succefull</a></li>
             </ul>
             <br><br><br><br><br>
         </div>
@@ -2082,6 +2085,7 @@
         </footer>
         <!-- /footer -->
 
+
         <link rel="stylesheet" href="./css/fancybox.css">
         <link rel="stylesheet" href="./css/swiper-bundle.min.css">
         <script src="./js/swiper-bundle.min.js" defer></script>
@@ -2090,6 +2094,66 @@
         <script src="./js/tippy-bundle.umd.min.js" defer></script>
         <script src="./js/counter.js" defer></script>
         <script src="./js/scripts.js" defer></script>
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box" id="popup-form">
+            <div class="popup-box">
+                <a href="" class="btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-title-wrap">
+                    <div class="popup-title">Нам важно знать Ваше мнение!</div>
+                    <p>С помощью этой формы Вы можете оставить <b>предложение</b>, <b>жалобу</b>, <b>претензию</b> или <b>вопрос</b>.</p>
+                    <p>Ваше обращение будет обработано <b>службой контроля качества</b> магазина.</p>
+                </div>
+                <div class="popup-content-wrap">
+                    <form action="/" class="frm-popup" id="form-popup">
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <input type="text" class="form-input" placeholder="Ваше имя">
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <input type="email" class="form-input" placeholder="Ваш e-mail" required>
+                                <div class="frm-message text-alert">Пожалуйста, введите адрес электронной почты </div>
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <input type="tel" class="form-input" placeholder="Ваш телефон">
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <textarea class="form-input" placeholder="Предложение, жалоба, отзыв или вопрос"></textarea>
+                            </div>
+                        </div>
+                        <div class="frm-row-submit">
+                            <div class="frm-field field-submit">
+                                <button type="submit" class="btn button-main">
+                                    <span class="button-title">Отправить</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-message" id="popup-succefull">
+            <div class="popup-box">
+                <a href="" class="btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-title-wrap">
+                    <div class="popup-title">Ваша заявка успешно отправлена!</div>
+                    <div class="elm-ico">
+                        <img src="./img/icons/succefull.svg" alt="">
+                    </div>
+                    <a href="" class="btn button-main js-popup-close">
+                        <div class="button-title">Готово</div>
+                    </a>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
 
     </div>
     <!-- /wrap -->

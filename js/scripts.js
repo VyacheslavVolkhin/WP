@@ -63,6 +63,15 @@ document.addEventListener("DOMContentLoaded", function() {
 	//form submit
 	const form = document.querySelector('#form');
 	const formPay = document.querySelector('#form-pay');
+	const formPopup = document.querySelector('#form-popup');
+	const formPopupMessage = document.querySelector('#popup-succefull');
+	if (formPopup) {
+		formPopup.addEventListener('submit', function(event) {
+			event.preventDefault();
+			this.closest('.popup-outer-box').classList.remove('active');
+			formPopupMessage.classList.add('active');
+		})
+	}
 	if (formPay) {
 		formPay.addEventListener('submit', function(event) {
 			event.preventDefault();

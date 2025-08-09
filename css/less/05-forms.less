@@ -1,6 +1,18 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.frm-popup {
+	.frm-field {
+		margin-bottom: 30px;
+	}
+	.frm-row-submit {
+		.frm-field {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
 .frm-field-select {
 	position: relative;
 	&.type-text {
