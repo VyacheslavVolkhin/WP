@@ -26,7 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		
 		const formatValue = (val) => {
 			const decimals = (dataStepRaw.split(decimalSeparator)[1] || '').length;
-			return val.toFixed(decimals) + dataUnit;
+			if (window.innerWidth < 1024) {
+				if (counter.classList.contains('type-small-mobile')) {
+					return val.toFixed(decimals);
+				} else {
+					return val.toFixed(decimals) + dataUnit;
+				}
+			} else {
+				return val.toFixed(decimals) + dataUnit;
+			}
 		};
 
 		

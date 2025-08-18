@@ -1849,7 +1849,7 @@
                             </a>
                         </div>
                         <div class="action-wrap action-cart">
-                            <a href="" class="btn-action" data-count="2">
+                            <a href="" class="btn-action js-popup-open" data-count="2" data-popup="popup-cart-header">
                                 <div class="button-ico">
                                     <img src="./img/icons/cart.svg" alt="">
                                 </div>
@@ -2797,6 +2797,449 @@
                 </div>
             </div>
         </div><!--/popup-outer-box-->
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-message popup-message-large" id="popup-succefull-order">
+            <div class="popup-box">
+                <a href="" class="btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-title-wrap">
+                    <div class="elm-ico">
+                        <img src="./img/icons/succefull.svg" alt="">
+                    </div>
+                    <div class="popup-title">Ваше сообщение отправлено</div>
+                    <p>В ближайшее время Ваш вопрос будет обработан менеджером. Ответ Вы сможете посмотреть на этой странице и в <a href="" class="link-main">личном кабинете</a>.</p>
+                    <a href="" class="btn button-main js-popup-close">
+                        <div class="button-title">Готово</div>
+                    </a>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-message popup-message-large" id="popup-cart-deleted">
+            <div class="popup-box">
+                <a href="" class="btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-title-wrap">
+                    <div class="popup-title">Вы действительно хотите удалить товар из корзины?</div>
+                </div>
+                <div class="popup-buttons-wrap">
+                    <div class="popup-button-wrap">
+                        <a href="" class="btn button-border">
+                            <div class="button-title">Да</div>
+                        </a>
+                    </div>
+                    <div class="popup-button-wrap">
+                        <a href="" class="btn js-popup-close">
+                            <div class="button-title">Отмена</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-cart-added popup-animate-right" id="popup-cart-added">
+            <div class="popup-box">
+                <div class="popup-title-wrap">
+                    <div class="popup-title">Товар добавлен в корзину</div>
+                </div>
+                <div class="popup-content-wrap">
+                    <div class="items-wrap">
+                        <div class="item-wrap">
+                            <div class="item-tile-cart-popup">
+                                <div class="tile-photo-wrap">
+                                    <a href="" class="tile-photo photo-contain">
+                                        <img src="./img/cart06.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title"><a href="">Вакуумный пакет 8*25см, 65 мкм, ПЭТ/ПЭ, с еврослотом</a></div>
+                                    </div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price" data-unit=" ₽">100 580</div>
+                                        <!-- <div class="tile-price price-old" data-unit=" ₽">100 580</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-buttons-wrap">
+                    <div class="popup-button-wrap">
+                        <a href="" class="btn">
+                            <div class="button-title">Перейти в корзину</div>
+                        </a>
+                    </div>
+                    <div class="popup-button-wrap">
+                        <a href="" class="btn button-border js-popup-close">
+                            <div class="button-title">Продолжить покупки</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-cart-header" id="popup-cart-header">
+            <div class="popup-box">
+                <a href="" class="btn-popup-close btn-action-ico ico-close-small js-popup-close"></a>
+                <div class="popup-title-wrap">
+                    <div class="popup-title">Корзина <span class="title-counter">7 товаров</span></div>
+                </div>
+                <div class="popup-content-wrap">
+                    <div class="items-wrap">
+                        <!-- item -->
+                        <div class="item-wrap">
+                            <div class="item-tile-cart-popup">
+                                <div class="tile-photo-wrap">
+                                    <a href="" class="tile-photo photo-cover">
+                                        <img src="./img/cart01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title"><a href="">Поддон под кассеты 6 ячеек (3 вставки) 446*240*66мм (0,7мм), PS</a></div>
+                                    </div>
+                                    <div class="tile-counter-wrap">
+                                        <div class="frm-field-counter type-small-all js-counter">
+                                            <button class="js-button-counter-plus btn button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-minus"></button>
+                                            <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+                                            <div class="field-total">на <span class="js-field-counter-total">200.9</span> руб./шт</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price" data-unit=" ₽">100 580</div>
+                                    </div>
+                                </div>
+                                <a href="" class="tile-button-del btn-action-ico ico-del"></a>
+                            </div>
+                        </div>
+                        <!-- /item -->
+                        <!-- item -->
+                        <div class="item-wrap">
+                            <div class="item-tile-cart-popup">
+                                <div class="tile-photo-wrap">
+                                    <a href="" class="tile-photo photo-cover">
+                                        <img src="./img/cat003.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title"><a href="">Пакет ВНУР 20см*30см(+0)*45мкм, ПВД, красный</a></div>
+                                    </div>
+                                    <div class="tile-counter-wrap">
+                                        <div class="frm-field-counter type-small-all js-counter">
+                                            <button class="js-button-counter-plus btn button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-minus"></button>
+                                            <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+                                            <div class="field-total">на <span class="js-field-counter-total">200.9</span> руб./шт</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price" data-unit=" ₽">100 580</div>
+                                    </div>
+                                </div>
+                                <a href="" class="tile-button-del btn-action-ico ico-del"></a>
+                            </div>
+                        </div>
+                        <!-- /item -->
+                        <!-- item -->
+                        <div class="item-wrap">
+                            <div class="item-tile-cart-popup">
+                                <div class="tile-photo-wrap">
+                                    <a href="" class="tile-photo photo-cover">
+                                        <img src="./img/cart06.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title"><a href="">Вакуумный пакет 8*25см, 65 мкм, ПЭТ/ПЭ, с еврослотом</a></div>
+                                    </div>
+                                    <div class="tile-counter-wrap">
+                                        <div class="frm-field-counter type-small-all js-counter">
+                                            <button class="js-button-counter-plus btn button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-minus"></button>
+                                            <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+                                            <div class="field-total">на <span class="js-field-counter-total">200.9</span> руб./шт</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price" data-unit=" ₽">100 580</div>
+                                    </div>
+                                </div>
+                                <a href="" class="tile-button-del btn-action-ico ico-del"></a>
+                            </div>
+                        </div>
+                        <!-- /item -->
+                        <!-- item -->
+                        <div class="item-wrap">
+                            <div class="item-tile-cart-popup">
+                                <div class="tile-photo-wrap">
+                                    <a href="" class="tile-photo photo-cover">
+                                        <img src="./img/cart01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title"><a href="">Поддон под кассеты 6 ячеек (3 вставки) 446*240*66мм (0,7мм), PS</a></div>
+                                    </div>
+                                    <div class="tile-counter-wrap">
+                                        <div class="frm-field-counter type-small-all js-counter">
+                                            <button class="js-button-counter-plus btn button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-minus"></button>
+                                            <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+                                            <div class="field-total">на <span class="js-field-counter-total">200.9</span> руб./шт</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price" data-unit=" ₽">100 580</div>
+                                    </div>
+                                </div>
+                                <a href="" class="tile-button-del btn-action-ico ico-del"></a>
+                            </div>
+                        </div>
+                        <!-- /item -->
+                        <!-- item -->
+                        <div class="item-wrap">
+                            <div class="item-tile-cart-popup">
+                                <div class="tile-photo-wrap">
+                                    <a href="" class="tile-photo photo-cover">
+                                        <img src="./img/cat003.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title"><a href="">Пакет ВНУР 20см*30см(+0)*45мкм, ПВД, красный</a></div>
+                                    </div>
+                                    <div class="tile-counter-wrap">
+                                        <div class="frm-field-counter type-small-all js-counter">
+                                            <button class="js-button-counter-plus btn button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-minus"></button>
+                                            <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+                                            <div class="field-total">на <span class="js-field-counter-total">200.9</span> руб./шт</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price" data-unit=" ₽">100 580</div>
+                                    </div>
+                                </div>
+                                <a href="" class="tile-button-del btn-action-ico ico-del"></a>
+                            </div>
+                        </div>
+                        <!-- /item -->
+                        <!-- item -->
+                        <div class="item-wrap">
+                            <div class="item-tile-cart-popup">
+                                <div class="tile-photo-wrap">
+                                    <a href="" class="tile-photo photo-cover">
+                                        <img src="./img/cart06.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title"><a href="">Вакуумный пакет 8*25см, 65 мкм, ПЭТ/ПЭ, с еврослотом</a></div>
+                                    </div>
+                                    <div class="tile-counter-wrap">
+                                        <div class="frm-field-counter type-small-all js-counter">
+                                            <button class="js-button-counter-plus btn button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-minus"></button>
+                                            <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+                                            <div class="field-total">на <span class="js-field-counter-total">200.9</span> руб./шт</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price" data-unit=" ₽">100 580</div>
+                                    </div>
+                                </div>
+                                <a href="" class="tile-button-del btn-action-ico ico-del"></a>
+                            </div>
+                        </div>
+                        <!-- /item -->
+                        <!-- item -->
+                        <div class="item-wrap">
+                            <div class="item-tile-cart-popup">
+                                <div class="tile-photo-wrap">
+                                    <a href="" class="tile-photo photo-cover">
+                                        <img src="./img/cart01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title"><a href="">Поддон под кассеты 6 ячеек (3 вставки) 446*240*66мм (0,7мм), PS</a></div>
+                                    </div>
+                                    <div class="tile-counter-wrap">
+                                        <div class="frm-field-counter type-small-all js-counter">
+                                            <button class="js-button-counter-plus btn button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-minus"></button>
+                                            <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+                                            <div class="field-total">на <span class="js-field-counter-total">200.9</span> руб./шт</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price" data-unit=" ₽">100 580</div>
+                                    </div>
+                                </div>
+                                <a href="" class="tile-button-del btn-action-ico ico-del"></a>
+                            </div>
+                        </div>
+                        <!-- /item -->
+                        <!-- item -->
+                        <div class="item-wrap">
+                            <div class="item-tile-cart-popup">
+                                <div class="tile-photo-wrap">
+                                    <a href="" class="tile-photo photo-cover">
+                                        <img src="./img/cat003.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title"><a href="">Пакет ВНУР 20см*30см(+0)*45мкм, ПВД, красный</a></div>
+                                    </div>
+                                    <div class="tile-counter-wrap">
+                                        <div class="frm-field-counter type-small-all js-counter">
+                                            <button class="js-button-counter-plus btn button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-minus"></button>
+                                            <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+                                            <div class="field-total">на <span class="js-field-counter-total">200.9</span> руб./шт</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price" data-unit=" ₽">100 580</div>
+                                    </div>
+                                </div>
+                                <a href="" class="tile-button-del btn-action-ico ico-del"></a>
+                            </div>
+                        </div>
+                        <!-- /item -->
+                        <!-- item -->
+                        <div class="item-wrap">
+                            <div class="item-tile-cart-popup">
+                                <div class="tile-photo-wrap">
+                                    <a href="" class="tile-photo photo-cover">
+                                        <img src="./img/cart06.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title"><a href="">Вакуумный пакет 8*25см, 65 мкм, ПЭТ/ПЭ, с еврослотом</a></div>
+                                    </div>
+                                    <div class="tile-counter-wrap">
+                                        <div class="frm-field-counter type-small-all js-counter">
+                                            <button class="js-button-counter-plus btn button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-minus"></button>
+                                            <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+                                            <div class="field-total">на <span class="js-field-counter-total">200.9</span> руб./шт</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price" data-unit=" ₽">100 580</div>
+                                    </div>
+                                </div>
+                                <a href="" class="tile-button-del btn-action-ico ico-del"></a>
+                            </div>
+                        </div>
+                        <!-- /item -->
+                        <!-- item -->
+                        <div class="item-wrap">
+                            <div class="item-tile-cart-popup">
+                                <div class="tile-photo-wrap">
+                                    <a href="" class="tile-photo photo-cover">
+                                        <img src="./img/cart01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title"><a href="">Поддон под кассеты 6 ячеек (3 вставки) 446*240*66мм (0,7мм), PS</a></div>
+                                    </div>
+                                    <div class="tile-counter-wrap">
+                                        <div class="frm-field-counter type-small-all js-counter">
+                                            <button class="js-button-counter-plus btn button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-minus"></button>
+                                            <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+                                            <div class="field-total">на <span class="js-field-counter-total">200.9</span> руб./шт</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price" data-unit=" ₽">100 580</div>
+                                    </div>
+                                </div>
+                                <a href="" class="tile-button-del btn-action-ico ico-del"></a>
+                            </div>
+                        </div>
+                        <!-- /item -->
+                        <!-- item -->
+                        <div class="item-wrap">
+                            <div class="item-tile-cart-popup">
+                                <div class="tile-photo-wrap">
+                                    <a href="" class="tile-photo photo-cover">
+                                        <img src="./img/cat003.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title"><a href="">Пакет ВНУР 20см*30см(+0)*45мкм, ПВД, красный</a></div>
+                                    </div>
+                                    <div class="tile-counter-wrap">
+                                        <div class="frm-field-counter type-small-all js-counter">
+                                            <button class="js-button-counter-plus btn button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-minus"></button>
+                                            <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+                                            <div class="field-total">на <span class="js-field-counter-total">200.9</span> руб./шт</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price" data-unit=" ₽">100 580</div>
+                                    </div>
+                                </div>
+                                <a href="" class="tile-button-del btn-action-ico ico-del"></a>
+                            </div>
+                        </div>
+                        <!-- /item -->
+                        <!-- item -->
+                        <div class="item-wrap">
+                            <div class="item-tile-cart-popup">
+                                <div class="tile-photo-wrap">
+                                    <a href="" class="tile-photo photo-cover">
+                                        <img src="./img/cart06.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title"><a href="">Вакуумный пакет 8*25см, 65 мкм, ПЭТ/ПЭ, с еврослотом</a></div>
+                                    </div>
+                                    <div class="tile-counter-wrap">
+                                        <div class="frm-field-counter type-small-all js-counter">
+                                            <button class="js-button-counter-plus btn button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-minus"></button>
+                                            <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+                                            <div class="field-total">на <span class="js-field-counter-total">200.9</span> руб./шт</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price" data-unit=" ₽">100 580</div>
+                                    </div>
+                                </div>
+                                <a href="" class="tile-button-del btn-action-ico ico-del"></a>
+                            </div>
+                        </div>
+                        <!-- /item -->
+                    </div>
+                </div>
+                <div class="popup-buttons-wrap">
+                    <div class="popup-button-wrap">
+                        <a href="" class="btn">
+                            <div class="button-title">Перейти в корзину</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+
 
     </div>
     <!-- /wrap -->

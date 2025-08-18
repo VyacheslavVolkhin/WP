@@ -40,7 +40,7 @@ select.form-input {
     display: block;
     text-overflow: ellipsis;
     width: 100%;
-    padding-right: 30px;
+    padding-right: 45px;
     background-image: url(../img/icons/arrow-select.svg);
     background-position: right 20px center;
     background-color: #fff;
@@ -73,6 +73,12 @@ select.form-input {
         background-repeat: no-repeat;
         background-position: right center;
     }
+	&:invalid {
+		border-color: #fff;
+	}
+	&.inp-error {
+		border-color: var(--clr-alert);
+	}
 }
 select::-ms-expand {
     display: none;
@@ -337,6 +343,12 @@ select.form-input:required:invalid {
 			}
 		}
 	}
+	&[disabled], &.button-disabled {
+		pointer-events: none;
+		background:	var(--clr-border);
+		border-color: var(--clr-border);
+		color: var(--clr-base-light);
+	}
 }
 .button-main {
 	width: 100%;
@@ -485,6 +497,18 @@ select.form-input:required:invalid {
             .t-rotate(180deg);
         }
     }
+	&.ico-del {
+		&:before {
+			background-image: url(../img/icons/trash.svg);
+			background-size: 27px auto;
+			filter: var(--filterAttToLight);
+		}
+		&:hover {
+			&:before {
+				filter: none;
+			}
+		}
+	}
     &.ico-menu {
         &:after, &:before {
             width: 24px;
@@ -518,6 +542,18 @@ select.form-input:required:invalid {
 		&:before {
 			background-image: url(../img/icons/cross.svg);
 			filter: var(--filterAttToLight);
+		}
+		&:hover {
+			&:before {
+				filter: none;
+			}
+		}
+    }
+    &.ico-close-small, &.ico-clear-small {
+		&:before {
+			background-image: url(../img/icons/cross.svg);
+			filter: var(--filterAttToLight) opacity(0.4);
+			background-size: 24px auto;
 		}
 		&:hover {
 			&:before {
