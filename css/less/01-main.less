@@ -60,6 +60,18 @@ p, ul, ol, table, blockquote, .bq-text {
 		margin-bottom: 0 !important;
 	}
 }
+.list-rows, ul.list-rows {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px 24px;;
+	align-items: center;
+	li {
+		margin-bottom: 0;
+		&:before {
+			top: 50%;
+		}
+	}
+}
 .list-dots {
 	li {
 		padding-left: 18px;
@@ -367,9 +379,26 @@ table {
 			}
 		}
 	}
+	.list-rows, ul.list-rows {
+		li {
+			width: calc(25% - 20px);
+		}
+	}
 }
 @media (min-width: 1400px) {
     :root {
         --paddingContainer: 50px;
     }
+	.list-rows, ul.list-rows {
+		li {
+			width: calc(25% - 20px);
+			font-size: 18px;
+			padding-left: 50px;;
+			&:before {
+				width: 32px;height: 32px;
+				margin-top: -16px;
+				background-size: 40px auto;
+			}
+		}
+	}
 }

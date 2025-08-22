@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+	const loadedTimer = setTimeout(function() {
+		document.querySelector('.wrap').classList.add('wrap-loaded')
+	}, 1000)
+
 	//fancybox
 	Fancybox.bind("[data-fancybox]", {
 		//settings
@@ -451,7 +455,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	});
 	document.querySelectorAll(".js-popup-close").forEach(function (element) {
-	element.addEventListener("click", function (event) {
+		element.addEventListener("click", function (event) {
 		document.body.classList.remove("popup-open");
 		for (i=0;i<popupsList.length;i++) {
 			popupsList[i
@@ -602,6 +606,23 @@ document.addEventListener("DOMContentLoaded", function() {
 				freeMode: false,
 			},
 		},
+	
+	});
+
+
+	//slider examples
+	const swiperSliderExamples = new Swiper('.slider-examples .swiper', {
+		loop: false,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		autoHeight: true,
+		speed: 400,
+		pagination: {
+			el: '.slider-examples-pagination',
+			clickable: true,
+		},
+		autoplay: false,
+		navigation: false,
 	
 	});
 
