@@ -668,6 +668,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			},
 			breakpoints: {
 				1024: {
+					direction: 'horizontal',
 				},
 			},
 		});
