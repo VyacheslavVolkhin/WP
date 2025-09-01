@@ -670,6 +670,9 @@ document.addEventListener("DOMContentLoaded", function() {
 				1024: {
 					direction: 'horizontal',
 				},
+				1920: {
+					direction: 'vertical',
+				},
 			},
 		});
 		const swiperPhotosMain = new Swiper(mainEl, {
