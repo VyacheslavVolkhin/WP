@@ -26,6 +26,38 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+	//lk back
+	const lkBackButton = document.querySelector('.js-btn-lk-back')
+	if (lkBackButton) {
+		lkBackButton.addEventListener('click', function(e) {
+			document.querySelector('.content-outer-wrap').classList.remove('content-active')
+			e.preventDefault();
+		})
+	}
+
+	//field-password
+	const passwordToggle = document.querySelectorAll(".js-password-toggle");
+	for (let i = 0; i < passwordToggle.length; i++) {
+	  passwordToggle[i
+		].addEventListener("click", function (e) {
+		if (this.classList.contains("active")) {
+		  this.classList.remove("active");
+		  const input = this.closest(".frm-field-password").querySelector(
+			".form-input"
+		  );
+		  input.type = "password";
+			} else {
+		  this.classList.add("active");
+		  const input = this.closest(".frm-field-password").querySelector(
+			".form-input"
+		  );
+		  input.type = "text";
+			}
+		e.preventDefault();
+		})
+	}
+
+
 	//select toggle content visibility
 	const inputs = document.querySelectorAll(
 	"input[data-content], input[data-content-check], input[data-content-uncheck]"
@@ -117,7 +149,15 @@ document.addEventListener("DOMContentLoaded", function() {
 	const form = document.querySelector('#form');
 	const formPay = document.querySelector('#form-pay');
 	const formPopup = document.querySelector('#form-popup');
+	const formPopupLK = document.querySelector('#form-popup-lk');
 	const formPopupMessage = document.querySelector('#popup-succefull');
+	if (formPopupLK) {
+		formPopupLK.addEventListener('submit', function(event) {
+			event.preventDefault();
+			this.closest('.popup-outer-box').classList.remove('active');
+			formPopupMessage.classList.add('active');
+		})
+	}
 	if (formPopup) {
 		formPopup.addEventListener('submit', function(event) {
 			event.preventDefault();

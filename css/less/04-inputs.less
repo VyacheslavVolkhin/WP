@@ -24,6 +24,9 @@
 		border-color: var(--clr-alert);
 	}
 }
+.inp-border {
+	border-color: var(--clr-border);
+}
 .inp-light {
 	border-color: var(--clr-bg-light);
 	background-color: var(--clr-bg-light);
@@ -350,6 +353,7 @@ select.form-input:required:invalid {
 		color: var(--clr-base-light);
 	}
 }
+
 .button-main {
 	width: 100%;
 }
@@ -369,6 +373,32 @@ select.form-input:required:invalid {
 	&:hover {
 		.button-ico {
 			filter: var(--filterWhite);
+		}
+	}
+}
+.button-toggle {
+	padding-left: 0;
+	padding-right: 26px;
+	position: relative;
+	&.button-link {
+		padding-right: 26px;
+	}
+	&:after {
+		content: "";
+		display: block;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		background: url(../img/icons/arrow-toggle.svg) center no-repeat;
+		background-size: 40px auto;
+		top: 50%;right: 0;
+		margin-top: -10px;
+		transition: all ease 0.2s;
+		filter: none;
+	}
+	&.active {
+		&:after {
+			rotate: 180deg;
 		}
 	}
 }
@@ -462,6 +492,22 @@ select.form-input:required:invalid {
 		&:after {
 			background-image: url(../img/icons/favorite-active.svg);
 			background-size: 32px auto;
+		}
+	}
+	&.ico-password-toggle {
+		&:before {
+			background-image: url(../img/icons/hide.svg);
+			filter: var(--filterAttToLight);
+		}
+		&:after {
+			background-image: url(../img/icons/show.svg);
+			filter: var(--filterAttToLight);
+			opacity: 0;
+		}
+		&:hover {
+			&:before, &:after {
+				filter: none;
+			}
 		}
 	}
     &.ico-arrow {
