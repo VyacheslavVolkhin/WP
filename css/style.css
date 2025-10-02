@@ -9053,6 +9053,7 @@ a.elm-cnt:hover {
   display: block;
 }
 .header .action-cart .popup-outer-box {
+  overflow: visible;
   display: none;
   animation: fadeinslide ease 0.2s;
   position: absolute;
@@ -9148,6 +9149,9 @@ body.popup-open:has(.popup-cart-added.active) {
   display: block;
   animation: showRight ease 1s;
   right: var(--paddingContainer);
+}
+.popup-cart-added {
+  overflow: visible;
 }
 .popup-cart-added .popup-box {
   border-radius: var(--mainRadius);
