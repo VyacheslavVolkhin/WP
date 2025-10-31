@@ -73,8 +73,25 @@
 	}
 }
 .frm-popup {
+	animation: fadein ease 0.2s;
+	&.form-hidden {
+		display: none;
+	}
+	.frm-message {
+		position: relative;
+		white-space: normal;
+		font-size: 11px;
+		line-height: 12px;
+		padding: 5px 0 0 0;
+		margin: 0;
+		height: auto;
+		overflow: hidden;
+	}
 	.frm-field {
 		margin-bottom: 30px;
+		&:has(.frm-message) {
+			margin-bottom: 15px;
+		}
 	}
 	.frm-row-submit {
 		.frm-field {
@@ -91,6 +108,23 @@
 	.frm-title {
 		font-weight: 600;
 		margin-bottom: 10px;
+	}
+	.field-text {
+		font-size: 15px;
+		line-height: 1.3;
+		b {
+			font-weight: 600;
+		}
+	}
+	.field-link {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 1.61;
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+	.form-phone {
+		white-space: nowrap;
 	}
 }
 .frm-field-select {
@@ -857,6 +891,16 @@
 }
 @media (min-width: 1024px) {
 	.frm-popup {
+		.frm-message {
+			font-size: 13px;
+			line-height: 15px;;
+		}
+		.field-text {
+			font-size: 18px;
+			b {
+				font-weight: 600;
+			}
+		}
 		.frm-title-wrap {
 			font-size: 1.8rem;
 			margin-bottom: 3rem;
